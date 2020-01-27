@@ -3,17 +3,14 @@ package com.example.springbootunittest.model.lego;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.TypeAlias;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+//@Document
 @Data
 @RequiredArgsConstructor
 @AllArgsConstructor
-@TypeAlias("paymentOptions")
+//@TypeAlias("paymentOptions")
 public class PaymentOptions {
-    @Id
+//    @Id
     private String id;
     private PaymentType type;
     private int fee;

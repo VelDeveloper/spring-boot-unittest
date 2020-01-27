@@ -49,27 +49,27 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-mongodb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.querydsl</groupId>
-            <artifactId>querydsl-mongodb</artifactId>
-            <version>4.1.4</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.data</groupId>-->
+            <!--<artifactId>spring-data-mongodb</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.querydsl</groupId>-->
+            <!--<artifactId>querydsl-mongodb</artifactId>-->
+            <!--<version>4.1.4</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>com.querydsl</groupId>
-            <artifactId>querydsl-apt</artifactId>
-            <version>4.1.4</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.querydsl</groupId>-->
+            <!--<artifactId>querydsl-apt</artifactId>-->
+            <!--<version>4.1.4</version>-->
+        <!--</dependency>-->
         <!-- Embedded  MongoDB for Testing -->
-        <dependency>
-            <groupId>de.flapdoodle.embed</groupId>
-            <artifactId>de.flapdoodle.embed.mongo</artifactId>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>de.flapdoodle.embed</groupId>-->
+            <!--<artifactId>de.flapdoodle.embed.mongo</artifactId>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>

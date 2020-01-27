@@ -1,42 +1,56 @@
 package com.example.springbootunittest.service;
 
-import com.example.springbootunittest.exceptions.EmployeeException;
 import com.example.springbootunittest.model.Capability;
-import com.example.springbootunittest.repository.CapabilityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class CapabilityService {
 
-    private final CapabilityRepository capabilityRepository;
+//    private final CapabilityRepository capabilityRepository;
 
     public List<Capability> listCapabilities() {
-        return capabilityRepository.findAll();
+//        Capability capability = getCapability();
+        return Arrays.asList(getCapability());
+//        return capabilityRepository.findAll();
+    }
+
+    private Capability getCapability() {
+        return Capability.builder()
+                    .id("sample")
+                    .numOfAvailableDevelopers(10)
+                    .numOfDevelopers(25)
+                    .techStack("Java")
+                    .build();
     }
 
     public Capability getCapability(String capabilityId) {
-        return capabilityRepository.findById(capabilityId)
-                .orElseThrow(() -> new EmployeeException("Capability with ID: "+capabilityId+" Not found"));
+        return getCapability();
+//        return capabilityRepository.findById(capabilityId)
+//                .orElseThrow(() -> new EmployeeException("Capability with ID: "+capabilityId+" Not found"));
     }
 
     public Capability createCapability(Capability capability) {
-        return capabilityRepository.insert(capability);
+        return capability;
+        // return capabilityRepository.insert(capability);
     }
 
     public Capability updateCapability(Capability capability) {
-        return capabilityRepository.findById(capability.getId())
-                .map(capability1 -> capabilityRepository.save(capability))
-                .orElseGet(() -> capabilityRepository.insert(capability));
+        return capability;
+//        return capabilityRepository.findById(capability.getId())
+//                .map(capability1 -> capabilityRepository.save(capability))
+//                .orElseGet(() -> capabilityRepository.insert(capability));
     }
 
     public void deleteCapability(String capabilityId) {
-        capabilityRepository.delete(
-                capabilityRepository.findById(capabilityId)
-                        .orElseThrow(() -> new EmployeeException("Capability with ID: "+capabilityId+" Not found")));
+        return;
+//        capabilityRepository.delete(
+//                capabilityRepository.findById(capabilityId)
+//                        .orElseThrow(() -> new EmployeeException("Capability with ID: "+capabilityId+" Not found")));
     }
 
 }

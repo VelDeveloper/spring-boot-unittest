@@ -19,84 +19,100 @@ public class LegoController {
 
     @GetMapping(value = "/list")
     public ResponseEntity<List<LegoSet>> listLegosets() {
-        return ResponseEntity.ok(legoService.listLegoSets());
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.listLegoSets());
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<LegoSet> getLegosetById(@PathVariable String id) {
-        return ResponseEntity.ok(legoService.getLegoset(id));
+        return ResponseEntity.ok(null);
+
+//        return ResponseEntity.ok(legoService.getLegoset(id));
     }
 
     @PostMapping
     public ResponseEntity<LegoSet> createLegoset(@RequestBody LegoSet legoSet) {
-        return ResponseEntity.ok(legoService.createLegoset(legoSet));
+//        return ResponseEntity.ok(legoService.createLegoset(legoSet));
+        return ResponseEntity.ok(null);
     }
 
     @PutMapping
     public ResponseEntity<LegoSet> updateLegoset(@RequestBody LegoSet employee) {
-        return ResponseEntity.ok(legoService.updateLegoset(employee));
+//        return ResponseEntity.ok(legoService.updateLegoset(employee));
+        return ResponseEntity.ok(null);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteLegoset(@PathVariable String id) {
-        legoService.deleteLegoset(id);
+//        legoService.deleteLegoset(id);
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/batchInsert")
     public ResponseEntity<List<LegoSet>> createAllLegoset(@RequestBody List<LegoSet> legoSet) {
-        return ResponseEntity.ok(legoService.createAllLegoset(legoSet));
+//        return ResponseEntity.ok(legoService.createAllLegoset(legoSet));
+        return ResponseEntity.ok(null);
     }
 
     @GetMapping(value = "/byTheme/{theme}")
     public ResponseEntity<LegoSet> getLegosetByTheme(@PathVariable String theme) {
-        return ResponseEntity.ok(legoService.getLegosetByTheme(theme));
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getLegosetByTheme(theme));
     }
 
     @GetMapping(value = "/byThemeContains/{theme}")
     public ResponseEntity<List<LegoSet>> getLegosetByThemeContains(@PathVariable String theme) {
-        return ResponseEntity.ok(legoService.getLegosetByThemeContains(theme));
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getLegosetByThemeContains(theme));
     }
 
     @GetMapping(value = "/byHardDifficultyAndNameContains/{name}")
     public ResponseEntity<List<LegoSet>> getLegosetByHardDifficultyAndNameContains(@PathVariable String name) {
-        return ResponseEntity.ok(legoService.getLegosetByHardDifficultyAndNameContains(name));
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getLegosetByHardDifficultyAndNameContains(name));
     }
 
     @GetMapping(value = "/byDeliveryPriceLessThan/{price}")
     public ResponseEntity<List<LegoSet>> getLegosetByHardDifficultyAndNameContains(@PathVariable Integer price) {
-        return ResponseEntity.ok(legoService.getLegosetByDeliveryPriceLessThan(price));
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getLegosetByDeliveryPriceLessThan(price));
     }
 
     @GetMapping(value = "/byRatingGreater/{rating}")
     public ResponseEntity<List<LegoSet>> getLegosetByRatingGreaterThan(@PathVariable Integer rating) {
-        return ResponseEntity.ok(legoService.getLegosetByRatingGreaterThan(rating));
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getLegosetByRatingGreaterThan(rating));
     }
 
     @GetMapping(value = "/greatReviews")
     public ResponseEntity<List<LegoSet>> getGreatReviews() {
-        return ResponseEntity.ok(legoService.getGreatReviews());
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getGreatReviews());
     }
 
     @GetMapping(value = "/bestBuys")
     public ResponseEntity<List<LegoSet>> getBestBuys() {
-        return ResponseEntity.ok(legoService.getBestBuys());
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getBestBuys());
     }
 
     //--Projection--
     @GetMapping(value = "/avgRatingReports")
     public ResponseEntity<List<AvgRatingModel>> getReports() {
-        return ResponseEntity.ok(legoService.getReports());
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getReports());
     }
 
     @GetMapping(value = "/fullTextSearch/{text}")
     public ResponseEntity<List<LegoSet>> getFullTextSearch(@PathVariable String text) {
-        return ResponseEntity.ok(legoService.fullTextSearch(text));
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.fullTextSearch(text));
     }
 
     //Query from nested mongo document(DBref)
     @GetMapping(value = "/paymentOptionById/{id}")
     public ResponseEntity<List<LegoSet>> getLegosetByPaymentOptions(@PathVariable String id) {
-        return ResponseEntity.ok(legoService.getLegosetByPaymentOptions(id));
+        return ResponseEntity.ok(null);
+//        return ResponseEntity.ok(legoService.getLegosetByPaymentOptions(id));
     }
 }
